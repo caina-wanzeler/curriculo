@@ -4,68 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cainã Wanzeler — Desenvolvedor Full Stack</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   
   <style>
-    :root{
-      --bg: #fbf9f7;
-      --card: #ffffff;
-      --muted: #667085;
-      --accent: #ffb577; /* laranja pastel */
-      --accent-600: #82674b;
-      --shadow: 0 6px 18px rgba(15,23,42,0.08);
-      --radius: 14px;
-      --gap: 20px;
-      --maxw: 90%;
-    }
-    *{
-        box-sizing:border-box;
-    }
-    html, body {
-        height:100%;
-        background:var(--bg);
-        font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; 
-        color:#0f1724;
-        margin: 0;
-        padding: 0;
-        overflow-x: visible;
-    }
-    
-    .wrap {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 0px
-    }
-    
-    header {
-        background:var(--card);
-        border-radius:var(--radius);
-        box-shadow:var(--shadow);
-        height: auto;
-        width: 100%;
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        padding: 1rem;
-    }
-    
-    .brand {
-        font-weight:700;
-        font-size: 1.5rem
-    }
-    
-    nav {
-        display: flex;
-        gap: 6px;
-    }
-      
-    nav a {
-        color:var(--muted);
-        text-decoration:none;
-        font-weight:500
-    }
-    
     .hero {
         display: flex;
         flex-direction: row;
@@ -108,7 +49,8 @@
     .cta {
         display: flex;
         flex-direction: row;
-        gap: 5px;
+        gap: 0.6rem;
+        margin-top: 8px;
     }
     
     
@@ -117,7 +59,7 @@
         width: auto;
         background:var(--accent);
         border:none;
-        padding:8px 14px;
+        padding: 6px 10px;
         display: inline-block;
         border-radius:5px;
         color:#fff;
@@ -249,13 +191,6 @@
         font-size:13px
     }
     
-    footer {
-        margin-top:28px;
-        text-align:center;
-        color:var(--muted);
-        font-size:14px
-    }
-    
     @media screen and (max-width:768px) {
       .wrap {
         padding: 0px 0px;
@@ -300,9 +235,6 @@
       .card-item div {
         width: 180px;
       }
-      header nav {
-        font-size: 0.8rem;
-      }
       .brand {
         font-size: 0.9rem;
       }
@@ -329,8 +261,12 @@
       div.meta {
         width: 122px;
       }
+      nav {
+        display: flex;
+        gap: 6px;
+      }
       nav a {
-        font-size: 0.55rem;
+        font-size: 0.5rem;
         white-space: nowrap;
       }
     }
@@ -360,23 +296,24 @@
   </style>
   
 </head>
-<body class="wrap">
+<body>
   <div class="wrap">
     <header>
-      <div class="brand">Cainã Wanzeler</div>
+      <div class="brand">
+        <a href="index.html">Cainã Wanzeler</a>
+      </div>
       <nav>
         <a href="#projetos">Projetos</a>
         <a href="#certs">Certificações</a>
         <!--<a href="#empresas">Empresas</a>-->
-        <a href="#contato">Contato</a>
-        <a href="#sobre">Sobre</a>
+        <a href="html/contato.html">Contato</a>
+        <a href="html/sobre.html">Sobre</a>
       </nav>
     </header>
-
+    
     <main>
       <section class="hero">
         <div class="avatar">
-          <!-- Substitua pela sua foto -->
           <img src="https://media.licdn.com/dms/image/v2/D4D03AQGiE2AQ4ZBVKQ/profile-displayphoto-shrink_100_100/B4DZSPLU5zHcAc-/0/1737568899767?e=1763596800&v=beta&t=VnXPM1ZILfxTsBNzXpt08FXXn8XM_eG1RgMQQRKpJM4" alt="Cainã Wanzeler">
         </div>
         <div class="intro">
@@ -385,16 +322,15 @@
           <p>Cainã Mateus Wanzeler Costa<br>Ciência da Computação</p>
           <div class="cta">
             <button class="btn" onclick="window.open('https://t.me/caina_wanzeler', '_blank')">Telegram</button>
-            <button class="btn" onclick="window.open('https://github.com/Cainaw', '_blank')">GitHub</button>
+            <button class="btn" onclick="window.open('https://github.com/caina-wanzeler', '_blank')">GitHub</button>
             <button class="btn" onclick="window.open('https://www.linkedin.com/in/cain%C3%A3-mateus-wanzeler-costa-594131279/', '_blank')">LinkedIn</button>
             <button class="btn" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=caina.wanzeler@gmail.com', '_blank')">Email</button>
           </div>
         </div>
       </section>
 
-      <!-- Certificações -->
       <section id="certs" class="card">
-        <div style="display:flex;justify-content:space-between;align-items:center">
+        <div class="section">
           <h2>CERTIFICAÇÕES</h2>
           <div class="controls">
             <button class="icon-btn" onclick="scroll_Left('cert-carousel')">◀</button>
@@ -404,27 +340,26 @@
         <div class="carousel" id="cert-carousel">
           <div class="card-item">
             <div class="cert-logo"><img src="imagens/Nexa - Fundamentos de IA Generativa com Bedrock.jpg" alt="IA Generativa"></div>
-            <div style="font-weight:600;margin-top:8px">DIO - Nexa</div>
+            <div class="classroom">DIO - Nexa</div>
             <div class="meta">OUT 2025 · Fundamentos de IA Generativa com Bedrock</div>
           </div>
 
           <div class="card-item">
             <div class="cert-logo"><img src="imagens/MySQL.jpg" alt="JDBC MySQL"></div>
-            <div style="font-weight:600;margin-top:8px">DIO - Riachuelo</div>
+            <div class="classroom">DIO - Riachuelo</div>
             <div class="meta">OUT 2025 · Banco de Dados MySQL</div>
           </div>
 
           <div class="card-item">
             <div class="cert-logo"><img src="imagens/Riachuelo - Primeiros Passos com Java.jpg" alt="Java"></div>
-            <div style="font-weight:600;margin-top:8px">DIO - Riachuelo</div>
+            <div class="classroom">DIO - Riachuelo</div>
             <div class="meta">OUT 2025 · Primeiros Passos com Java</div>
           </div>
         </div>
       </section>
 
-      <!-- Projetos -->
       <section id="projetos" class="card">
-        <div style="display:flex;justify-content:space-between;align-items:center">
+        <div class="section">
           <h2>PROJETOS</h2>
           <div class="controls">
             <button class="icon-btn" onclick="scroll_Left('proj-carousel')">◀</button>
@@ -449,7 +384,6 @@
         </div>
       </section>
 
-      <!-- Empresas / Experiência -->
        <!--
       <section id="empresas" class="card">
         <h2>EMPRESAS</h2>
@@ -461,7 +395,6 @@
       </section>
       -->
 
-      <!-- Skills -->
       <section class="card">
         <h2>TECNOLOGIAS & SKILLS</h2>
         <div class="skills" style="margin-top:10px">
@@ -474,14 +407,11 @@
         </div>
       </section>
 
-      <footer>© <span id="year"></span> Cainã Wanzeler — Desenvolvedor Full Stack</footer>
+      <footer>©&nbsp<span id="year"></span>&nbspCainã Wanzeler — Desenvolvedor Full Stack</footer>
     </main>
   </div>
 
-  <script>
-    // year
-    document.getElementById('year').innerText = new Date().getFullYear();
-    
+  <script src="js/script.js">
     // simple scroll controls
     function scroll_Right(id){
       const el = document.getElementById(id);
