@@ -10,11 +10,41 @@
         h1 {
             font-size: 1.5rem;
         }
+        h2 {
+            font-size: 1.3rem;
+        }
+        a {
+            color: black;
+        }
         section div {
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 1rem;
+        }
+
+        ul {
+            padding-left: 15px;
+
+        }
+        li {
+            font-size: 1rem;
+            padding: 0.2rem;
+        }
+        #modules {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+        }
+        #skills {
+            display: flex;
+            flex-direction: column;
+            width: 35%;
+        }
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
 
     </style>
@@ -38,9 +68,37 @@
             <section class="card">
                 <div>
                     <button class="icon-btn" onclick="window.open('../certificados.html', '_self')">◀</button>
-                    <h1>Fundamentos de IA Generativa com Bedrock</h1>
+                    <h1>
+                        <a href="https://www.dio.me/certificate/GOQG44SL/share" target="_blank">Nexa</a> - 
+                        Fundamentos de IA Generativa com Bedrock
+                    </h1>
                 </div>
             </section>
+
+            <section>
+                <div class="card" id="modules">
+                    <h2>Módulos</h2>
+                    <div>
+                        <ul>
+                            <li>Introdução ao Mundo da IA Generativa</li>
+                            <li>Explorando IAs Generativas na AWS</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" id="skills">
+                    <h2>Habilidades</h2>
+                    <div>
+                        <ul>
+                            <li>AWS</li>
+                            <li>Amazon Nova</li>
+                            <li>Amazon Bedrock</li>
+                            <li>Amazon AgentCore</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
         </main>
         <footer>©&nbsp<span id="year"></span>&nbspCainã Wanzeler — Desenvolvedor Full Stack</footer>
     </div>
