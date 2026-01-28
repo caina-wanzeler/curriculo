@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cainã Wanzeler — Certificados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        h1 {
+            font-size: 1.2rem;
+            color: var(--accent-600);
+            padding-bottom: 1rem;
+        }
+        img {
+            width: 4rem;
+        }
+        .items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(11.5rem, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+        .card-item {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 20px;
+            max-width: 300px;
+            min-width: 100px;
+            width: 100%;
+            height: 200px;
+        }
+        div.meta {
+            font-size: 0.76rem;
+        }
+
+        @media screen and (max-width: 1200px) {
+            div.items {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+            }
+        }
+
+        @media screen and (max-width: 1100px) {
+            div.items {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+            }
+        }
+        
+        @media screen and (max-width: 850px) {
+            div.meta {
+                font-size: 0.75rem;
+            }
+            div.classroom {
+                font-size: 0.8rem;
+            }
+            div.items {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+                gap: 10px;
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            div.meta {
+                font-size: 0.7rem;
+            }
+            div.classroom {
+                font-size: 0.8rem;
+            }
+            div.items {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+                gap: 10px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            div.meta {
+                font-size: 0.5rem;
+                width: 6.5rem;
+            }
+            div.classroom {
+                font-size: 0.7rem;
+            }
+            div.items {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+                gap: 10px;
+            }
+            div.card-item {
+                height: 160px;
+            }
+            img {
+                width: 60px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="brand">
+                <a href="../index.html">Cainã Wanzeler</a>
+            </div>
+            <nav>
+                <a href="projetos.html">Projetos</a>
+                <a href="certificados.html">Certificações</a>
+                <!--<a href="#empresas">Empresas</a>-->
+                <a href="sobre.html">Sobre</a>
+            </nav>
+        </header>
+        <main>
+            <div class="card">
+                <h1>MINHAS CERTIFICAÇÕES</h1>
+                <div class="items" >
+                    <div class="card-item">
+                        <div class="cert-logo"><img src="../imagens/Nexa - Machine Learning e GenAI na Prática.jpg" alt="JDBC MySQL"></div>
+                        <div class="classroom">DIO - Nexa</div>
+                        <div class="meta">DEZ 2025 · Machine Learning e GenAI na Prática</div>
+                    </div>
+
+                    <div class="card-item">
+                        <div class="cert-logo"><img src="../imagens/TQI - Modernizacao com GenAI.jpg" alt="JDBC MySQL"></div>
+                        <div class="classroom">DIO - TQI</div>
+                        <div class="meta">DEZ 2025 · Modernizacao com GenAI</div>
+                    </div>
+
+                    <div class="card-item" onclick="window.open('certificados/bedrock_nexa.html', '_self')">
+                        <div class="cert-logo"><img src="../imagens/Nexa - Fundamentos de IA Generativa com Bedrock.jpg" alt="IA Generativa"></div>
+                        <div class="classroom">DIO - Nexa</div>
+                        <div class="meta">OUT 2025 · Fundamentos de IA Generativa com Bedrock</div>
+                    </div>
+
+                    <div class="card-item" onclick="window.open('certificados/java_riachuelo.html', '_self')">
+                        <div class="cert-logo"><img src="../imagens/Riachuelo - Primeiros Passos com Java.jpg" alt="Java"></div>
+                        <div class="classroom">DIO - Riachuelo</div>
+                        <div class="meta">OUT 2025 · Primeiros Passos com Java</div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </main>
+        <footer>©&nbsp<span id="year"></span>&nbspCainã Wanzeler — Desenvolvedor Full Stack</footer>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

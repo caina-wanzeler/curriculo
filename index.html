@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cainã Wanzeler — Desenvolvedor Full Stack</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .hero {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 28px;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    
+    .avatar {
+        width: 10rem;
+        height:auto;
+        overflow:visible;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    
+    .avatar img {
+        width: 12rem;
+        height:auto;
+        object-fit:cover;
+        border-radius: 50%;
+    }
+    
+    .intro h1 {
+        font-size:36px;
+        margin:0 0 6px 0;
+        line-height:1.02
+    }
+    
+    .intro p {
+        font-size: 1.1rem;
+        margin:0;
+        color:var(--muted);
+        font-weight:500
+    }
+    
+    .cta {
+        display: flex;
+        flex-direction: row;
+        gap: 0.6rem;
+        margin-top: 8px;
+    }
+
+    .btn {
+        white-space: nowrap;
+        width: auto;
+        background:var(--accent);
+        border:none;
+        padding: 6px 10px;
+        display: inline-block;
+        border-radius:5px;
+        color:#fff;
+        font-weight:600;
+        cursor:pointer;
+        box-shadow:0 6px 14px rgba(255,169,77,0.18);
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+          background-color: rgb(242, 140, 57);
+        }
+    }
+    
+    section.card h2 {
+        color:var(--accent-600);
+        margin:0 0 12px 0;
+        letter-spacing:0.6px
+    }
+    
+    .carousel {
+        background-color: rgb(253, 252, 252);
+        border-radius: var(--radius);
+        display:flex;
+        gap:var(--gap);
+        overflow-x:auto;
+        padding-bottom:6px;
+        padding: 6px 6px;
+        scroll-snap-type:x mandatory
+    }
+    
+    .carousel::-webkit-scrollbar {
+        height:10px
+    }
+    
+    .carousel::-webkit-scrollbar-thumb {
+        background:rgba(15,23,42,0.12);
+        border-radius:6px
+    }
+    
+    .cert-logo {
+        height:44px;
+        display:flex;
+        align-items:center;gap:10px
+    }
+    
+    .cert-logo img {
+        height:36px
+    }
+    
+    .companies {
+        display:flex;
+        gap:12px;
+        flex-wrap:wrap
+    }
+    
+    .company {
+        flex:0 0 220px;
+        padding:12px;
+        border-radius:10px;
+        background:#fff;
+        box-shadow:var(--shadow);
+        display:flex;
+        align-items:center;
+        gap:12px
+    }
+    
+    .company .logo {
+        width:44px;
+        height:44px;
+        border-radius:8px;
+        background:linear-gradient(180deg,#fff,#f4f4f4);
+        display:flex;align-items:center;
+        justify-content:center
+    }
+    
+    .skills {
+        display:flex;
+        gap:10px;
+        flex-wrap:wrap;
+        margin-top:8px
+    }
+    
+    .skill{
+        background:rgba(255,169,77,0.12);
+        color: #4a2b00;
+        padding: 8px 10px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 13px;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+          background-color: rgb(245, 220, 194);
+        }
+    }
+
+    
+
+
+    @media screen and (max-width: 500px) {
+      .intro h1 {
+        font-size: 1.5rem;
+      }
+      .intro p {
+        font-size: 0.8rem;
+      }
+      .avatar {
+        padding: 0 0px;
+      }
+      .avatar img {
+        width: 120px;
+      }
+      section {
+        display: block;
+      }
+
+      header {
+        padding: 0.8rem;
+      }
+      /*
+      body {
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      */
+      .cta {
+        display: flex;
+      }
+      .btn {
+        font-size: 0.5rem;
+        padding: 6px 7px;
+        margin: 0;
+      }
+      .hero {
+        display: flex;
+        padding: 0.4rem;
+        margin: 2rem;
+        justify-content: center;
+        gap: 10px;
+      }
+      .card-item div {
+        width: 180px;
+      }
+      .brand {
+        font-size: 0.8rem;
+      }
+      .intro p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .intro h1 {
+        font-size: 1.3rem;
+      }
+      .intro p {
+        font-size: 0.65rem;
+      }
+      .card div {
+        font-size: 0.7rem;
+      }
+      .card-item {
+        width: 150px;
+      }
+      .card-item div {
+        width: 122px;
+        font-size: 0.7rem;
+      }
+      div.meta {
+        width: 122px;
+      }
+      nav {
+        display: flex;
+        gap: 4px;
+      }
+      nav a {
+        font-size: 0.52rem;
+        white-space: nowrap;
+      }
+    }
+    
+    .drag-hint {
+        font-size:13px;
+        color:var(--muted);
+        margin-top:8px
+    }
+    .controls {
+        display:flex;
+        gap:8px;
+        align-items:center
+    }
+    section img {
+      width: 4rem;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <a href="index.html">Cainã Wanzeler</a>
+      </div>
+      <nav>
+        <a href="html/projetos.html">Projetos</a>
+        <a href="html/certificados.html">Certificações</a>
+        <!--<a href="#empresas">Empresas</a>-->
+        <a href="html/sobre.html">Sobre</a>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="hero">
+        <div class="avatar">
+          <img src="imagens/hero.png" alt="Cainã Wanzeler">
+        </div>
+        <div class="intro">
+          <h1>Olá, eu sou<br>Cainã Wanzeler</h1>
+          <p>Desenvolvedor Full Stack — Java · HTML · CSS · JS · Vue · MySQL</p>
+          <p>Cainã Mateus Wanzeler Costa<br>Ciência da Computação</p>
+          <div class="cta">
+            <!--<button class="btn" onclick="window.open('https://t.me/caina_wanzeler', '_blank')">Telegram</button>-->
+            <button class="btn" onclick="window.open('https://github.com/caina-wanzeler', '_blank')">GitHub</button>
+            <button class="btn" onclick="window.open('https://www.linkedin.com/in/cain%C3%A3-mateus-wanzeler-costa-594131279/', '_blank')">LinkedIn</button>
+            <button class="btn" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=caina.wanzeler@gmail.com', '_blank')">Email</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="certs" class="card">
+        <div class="section">
+          <h2>CERTIFICAÇÕES</h2>
+          <div class="controls">
+            <button class="icon-btn" onclick="scroll_Left('cert-carousel')">◀</button>
+            <button class="icon-btn" onclick="scroll_Right('cert-carousel')">▶</button>
+          </div>
+        </div>
+        <div class="carousel" id="cert-carousel">
+          <div class="card-item">
+            <div class="cert-logo"><img src="imagens/Nexa - Machine Learning e GenAI na Prática.jpg" alt="JDBC MySQL"></div>
+            <div class="classroom">DIO - Nexa</div>
+            <div class="meta">DEZ 2025 · Machine Learning e GenAI na Prática</div>
+          </div>
+
+          <div class="card-item">
+            <div class="cert-logo"><img src="imagens/TQI - Modernizacao com GenAI.jpg" alt="JDBC MySQL"></div>
+            <div class="classroom">DIO - TQI</div>
+            <div class="meta">DEZ 2025 · Modernizacao com GenAI</div>
+          </div>
+
+          <div class="card-item">
+            <div class="cert-logo"><img src="imagens/Nexa - Fundamentos de IA Generativa com Bedrock.jpg" alt="IA Generativa"></div>
+            <div class="classroom">DIO - Nexa</div>
+            <div class="meta">OUT 2025 · Fundamentos de IA Generativa com Bedrock</div>
+          </div>
+
+          <div class="card-item">
+            <div class="cert-logo"><img src="imagens/Riachuelo - Primeiros Passos com Java.jpg" alt="Java"></div>
+            <div class="classroom">DIO - Riachuelo</div>
+            <div class="meta">OUT 2025 · Primeiros Passos com Java</div>
+          </div>
+
+          
+        </div>
+      </section>
+
+      <section id="projetos" class="card">
+        <div class="section">
+          <h2>PROJETOS</h2>
+          <div class="controls">
+            <button class="icon-btn" onclick="scroll_Left('proj-carousel')">◀</button>
+            <button class="icon-btn" onclick="scroll_Right('proj-carousel')">▶</button>
+          </div>
+        </div>
+
+        <div class="carousel" id="proj-carousel">
+          <div class="card-item">
+            <div class="project-thumb">
+              <img src="imagens/curriculo-gaby images/curriculo-gaby_desktop.png" alt="Site formato desktop">
+            </div>
+            <div class="project-title">Site de Portfólio</div>
+            <div class="meta">Vue · CSS · HTML · JavaScript</div>
+            <a class="project-link" href="./html/projetos/curriculo-gaby.html">Ver mais</a>
+          </div>
+        </div>
+      </section>
+
+       <!--
+      <section id="empresas" class="card">
+        <h2>EMPRESAS</h2>
+        <div class="companies" style="margin-top:12px">
+          <div class="company"><div class="logo">X</div><div><strong>Empresa X</strong><div class="meta">2019-2021 · Backend</div></div></div>
+          <div class="company"><div class="logo">Y</div><div><strong>Empresa Y</strong><div class="meta">2016-2019 · Full Stack</div></div></div>
+          <div class="company"><div class="logo">Z</div><div><strong>Empresa Z</strong><div class="meta">2014-2016 · Estágio</div></div></div>
+        </div>
+      </section>
+      -->
+
+      <section class="card">
+        <h2>TECNOLOGIAS & SKILLS</h2>
+        <div class="skills" style="margin-top:10px">
+          <div class="skill">Java</div>
+          <div class="skill">Vue</div>
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">MySQL</div>
+        </div>
+      </section>
+
+      <footer>©&nbsp<span id="year"></span>&nbspCainã Wanzeler — Desenvolvedor Full Stack</footer>
+    </main>
+  </div>
+
+  <script>
+    // simple scroll controls
+    function scroll_Right(id){
+      const el = document.getElementById(id);
+      el.scrollBy({left: 280, behavior: 'smooth'});
+    }
+    function scroll_Left(id){
+      const el = document.getElementById(id);
+      el.scrollBy({left: -280, behavior: 'smooth'});
+    }
+
+    // make carousels draggable
+    function makeDraggable(selector){
+      const el = document.getElementById(selector);
+      let isDown=false,startX,scrollLeftPos;
+      el.addEventListener('mousedown', (e)=>{isDown=true;el.classList.add('active');startX=e.pageX - el.offsetLeft;scrollLeftPos=el.scrollLeft});
+      window.addEventListener('mouseup', ()=>{isDown=false;el.classList.remove('active')});
+      el.addEventListener('mouseleave', ()=>{isDown=false;el.classList.remove('active')});
+      el.addEventListener('mousemove', (e)=>{if(!isDown) return; e.preventDefault(); const x=e.pageX - el.offsetLeft; const walk=(x-startX)*1.2; el.scrollLeft = scrollLeftPos - walk;});
+
+      // touch
+      let startTouchX, startTouchScroll;
+      el.addEventListener('touchstart',(e)=>{startTouchX=e.touches[0].pageX;startTouchScroll=el.scrollLeft});
+      el.addEventListener('touchmove',(e)=>{const x=e.touches[0].pageX; const walk=(x-startTouchX)*1.2; el.scrollLeft = startTouchScroll - walk});
+    }
+
+    ['cert-carousel','proj-carousel'].forEach(makeDraggable);
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
